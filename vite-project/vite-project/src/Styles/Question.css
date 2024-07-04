@@ -1,0 +1,44 @@
+.form--question {
+  display: flex;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 4vh;
+  width: 15vh;
+  border-radius: 15px;
+  border-width: 1px;
+  border: 1px solid #4D5B9E;
+  background-color: white;
+  color: #4D5B9E;
+  cursor: pointer;
+  transition: 0.3s, color 0.3s;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  margin-right: 3vh;
+  margin-bottom: 2vh;
+  font-size: 1rem;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.question-title {
+  font-family: 'Karla', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #293264;
+}
+
+.line {
+  margin-top: 1vh;
+}
+
+.clicked {
+  z-index: 111;
+  background-color: #D6DBF5;
+  color: #293264;
+}

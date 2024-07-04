@@ -1,0 +1,132 @@
+body {
+  position: relative;
+  margin-left: 7vh;
+  margin-top: 3vh;
+  margin-right: 7vh;
+  margin-bottom: 3vh;
+}
+
+.start-div {
+  top: 30vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  color: #293264;
+  font-size: 3rem;
+  font-family: "Karla", sans-serif;
+  margin: 0;
+}
+
+.description {
+  color: #293264;
+  font-size: 1.5rem;
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  margin-top: 2vh;
+  margin-bottom: 8vh;
+}
+
+.start-button {
+  height: 9.5vh;
+  width: 35vh;
+  border-radius: 3vh;
+  border: none;
+  color: #F5F7FB;
+  font-family: "Inter", sans-serif;
+  background-color: #4D5B9E;
+  cursor: pointer;
+  font-size: 1.5rem;
+  margin: 0;
+  transition: 0.3s ease;
+}
+
+.start-button:hover,
+.check-answers-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 18px rgba(0, 0, 0, 0.432);
+  background-color: #6174d4;
+  color: #F5F7FB;
+}
+
+.label:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.form--question {
+  display: flex;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 4vh;
+  border-radius: 15px;
+  border-width: 1px;
+  border: 1px solid #4D5B9E;
+  background-color: white;
+  color: #4D5B9E;
+  cursor: pointer;
+  transition: 0.3s, color 0.3s;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  margin-right: 3vh;
+  margin-bottom: 2vh;
+  font-size: 1rem;
+  white-space: nowrap;    
+  text-overflow: ellipsis;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+
+input[type="radio"] {
+  display: none;
+}
+
+.question-title {
+  font-family: 'Karla', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #293264;
+}
+
+.line {
+  margin-top: 1vh;
+  background-color: #DBDEF0;
+}
+
+.results {
+  margin-top: 4vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.check-answers-button {
+  width: 22vh;
+  height: 6.5vh;
+  border-radius: 2.25vh;
+  border: none;
+  color: #F5F7FB;
+  font-family: "Inter", sans-serif;
+  background-color: #4D5B9E;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.score-text {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #293264;
+  margin-right: 4vh;
+}

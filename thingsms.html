@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .one-line-div {
+  white-space: nowrap; /* Prevent text wrapping */
+  overflow: hidden;    /* Hide overflowing text */
+  text-overflow: ellipsis; /* Show ellipsis for overflowing text */
+  border: 1px solid #ccc; /* Optional: for visual clarity */
+  padding: 10px; /* Optional: add some padding */
+}
+        </style>
+    </head>
+    <body>
+        <div id="dynamicDiv" class="one-line-div">This is some sdynamic textdasddsads that should fit in one line.</div>
+        <script>
+            window.addEventListener('DOMContentLoaded', () => {
+            const dynamicDiv = document.getElementById('dynamicDiv');
+            adjustDivWidth(dynamicDiv);
+            
+            // Optionally, you can adjust the width dynamically based on text changes
+            // For example, if text is updated via JavaScript:
+            // dynamicDiv.textContent = "New dynamic text that should also fit in one line.";
+            // adjustDivWidth(dynamicDiv);
+            });
+
+            function adjustDivWidth(div) {
+                const span = document.createElement('span');
+                span.style.visibility = 'hidden';
+                span.style.whiteSpace = 'nowrap';
+                span.textContent = div.textContent;
+
+                document.body.appendChild(span);
+                const textWidth = span.offsetWidth;
+                document.body.removeChild(span);
+
+                div.style.width = `${textWidth}px`;
+            }
+        </script>
+    </body>
+</html>
