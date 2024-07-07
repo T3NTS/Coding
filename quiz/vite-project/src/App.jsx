@@ -29,17 +29,25 @@ export default function App() {
       }))))
       .then(setResultsDiv(
         <div className='results'>
-          <button onClick={checkAnswers} className='check-answers-button'>Check Answers</button>
+          <button onClick={checkAnswers} className='disabled'>Check Answers</button>
         </div>
       ))
   }, [game]);
 
   React.useEffect(() => {
-    setResultsDiv(
-      <div className='results'>
-        <button onClick={checkAnswers} className='check-answers-button'>Check Answers</button>
-      </div>
-    )
+    let isEmpty = false
+    Object.entries(formData).forEach(([key, value]) => {
+      if (value === "") {
+        isEmpty = true
+      }
+    })
+    if (!isEmpty) {
+      setResultsDiv(
+        <div className='results'>
+          <button onClick={checkAnswers} className='check-answers-button'>Check Answers</button>
+        </div>
+      )
+    }
   }, [formData])
   
   function shuffleArray(array) {
@@ -96,7 +104,6 @@ export default function App() {
   function isToggled(item) {
     let result = false
     Object.entries(formData).forEach(([key, value]) => {
-      //console.log(value, item)
         if (value == item) {
             result = true
         }

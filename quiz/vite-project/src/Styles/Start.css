@@ -123,6 +123,22 @@ input[type="radio"] {
   transition: 0.3s ease;
 }
 
+.disabled {
+  width: 22vh;
+  height: 6.5vh;
+  border-radius: 2.25vh;
+  border: none;
+  color: #F5F7FB;
+  font-family: "Inter", sans-serif;
+  background-color: #4D5B9E;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: 0.3s ease;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
 .score-text {
   font-family: 'Inter', sans-serif;
   font-weight: 700;
