@@ -1,0 +1,157 @@
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    transition: 0.3s ease;
+}
+
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+}
+
+.main-div {
+    position: relative;
+    height: 24vw;
+    width: 52vw;
+    box-shadow: 0 10px 20px 0 #b3bbc673;
+    border-radius: 15px;
+    padding: 30px;
+}
+
+
+.input-div,
+.output-div {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 23vw;
+    margin-top: 80px;
+}
+
+.input-div {
+    left: 30px;
+    top: 30px;
+}
+
+.output-div {
+    right: 30px;
+    top: 30px;
+}
+
+.select-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    min-height: 5vw;
+    min-width: 23vw;
+}
+
+.icon-container {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    right: 0;
+    margin-right: 20px;
+    margin-top: 25px;
+    justify-content: right;
+}
+
+.arrow-down {
+    background: url(assets/chevron-down-svgrepo-com.svg) no-repeat center center / cover;
+    height: 12px;
+    width: 12px;
+    cursor: pointer;
+    border: none;
+}
+
+.input-select,
+.output-select {
+    position: relative;
+    appearance: none;
+    width: 100%;
+    margin-bottom: 1vw;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding-left: 10px;
+    font-size: 1rem;
+}
+
+.input-select:hover,
+.output-select:hover {
+    background: rgba(255, 255, 255, 0.116);
+    border: black;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.input-input,
+.output-input {
+    height: 4vw;
+    background-color: #F1F2F5;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+    border: none;
+    outline: none;
+    transition: background-color 0.3s;
+    border-bottom: black 0.5px solid;
+    padding-left: 20px;
+    font-size: 1.3rem;
+}
+
+.input-input:hover,
+.output-input:hover {
+    background-color: #d7d7d7;
+    border-bottom: black 1px solid;
+}
+
+.swap-button {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    top: 170px;
+    left: 417px;
+    z-index: 1;
+    background: url(assets/swap-horizontaldsad.svg) no-repeat center center / cover;
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    transition: 0.3s ease;
+  }
+
+  .swap-button:hover {
+    transform: scale(1.05);
+  }
+
+  .svg-element {
+    size: 100%;
+  }
+
+.container1,
+.container2 {
+    margin-top: 10px;
+}
+
+  .button {
+    font-weight: 500;
+    color: black;
+    font-size: 0.9rem;
+    min-width: 64px;
+    min-height: 30px;
+    border-radius: 100px;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    transition: 0.3s;
+  }
+
+  .button:hover {
+    background-color: #ebecee;
+    color: blue;
+  }
