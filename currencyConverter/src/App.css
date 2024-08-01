@@ -53,23 +53,54 @@ body {
     position: absolute;
     width: 100%;
     right: 0;
-    margin-right: 20px;
-    margin-top: 25px;
+    margin-right: 10px;
+    margin-top: 20px;
     justify-content: right;
+    align-items: center;
+    padding-right: 2px;
+    min-height: 24px;
+    max-width: 24px;
 }
 
-.arrow-down {
-    background: url(assets/chevron-down-svgrepo-com.svg) no-repeat center center / cover;
-    height: 12px;
-    width: 12px;
+.arrow {
+    background-color: white;
+    height: 24px;
+    width: 24px;
     cursor: pointer;
     border: none;
+    border-radius: 2px;
+    transition: 0.3s ease;
+}
+
+
+.arrow img,
+.xmark img {
+    max-width: 12px;
+    max-height: 12px;
+    display: block;
+    margin: auto;
+}
+
+.arrow:hover,
+.xmark:hover {
+    background-color: rgb(247, 244, 244);
+}
+
+.xmark {
+    background-color: white;
+    height: 24px;
+    width: 24px;
+    cursor: pointer;
+    border: none;
+    border-radius: 2px;
+    transition: 0.3s ease;
 }
 
 .input-select,
 .output-select {
     position: relative;
     appearance: none;
+    border-color: rgb(179, 178, 178);
     width: 100%;
     margin-bottom: 1vw;
     background: rgba(255, 255, 255, 0.2);
@@ -84,6 +115,14 @@ body {
     background: rgba(255, 255, 255, 0.116);
     border: black;
     border-width: 1px;
+    border-style: solid;
+}
+
+.input-select:focus,
+.output-select:focus {
+    outline: none;
+    border: blue;
+    border-width: 2px;
     border-style: solid;
 }
 
@@ -114,8 +153,8 @@ body {
     justify-content: center;
     border: none;
     cursor: pointer;
-    top: 170px;
-    left: 417px;
+    top: 39%;
+    left: 48.8%;
     z-index: 1;
     background: url(assets/swap-horizontaldsad.svg) no-repeat center center / cover;
     width: 25px;

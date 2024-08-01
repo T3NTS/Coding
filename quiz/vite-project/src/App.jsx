@@ -20,18 +20,24 @@ export default function App() {
 
 
   React.useEffect(() => {
-    fetch('https://opentdb.com/api.php?amount=5&category=23&type=multiple')
-      .then(res => res.json())
-      .then(data => setAllData(data.results.map((item, index) => ({
+    const promise = fetch('https://opentdb.com/api.php?amount=5&category=23&type=multiple')
+    .then((response) => {
+      console.log(response)
+      return response.json()
+    })
+    .then((data) => {
+      console.log(data)
+      setAllData(data.results.map((item, index) => ({
         ...item,
         id: index,
         answers: getAnswers(item)
-      }))))
-      .then(setResultsDiv(
-        <div className='results'>
-          <button onClick={checkAnswers} className='disabled'>Check Answers</button>
-        </div>
-      ))
+      })))
+    })
+    .then(setResultsDiv(
+      <div className='results'>
+        <button onClick={checkAnswers} className='disabled'>Check Answers</button>
+      </div>
+    ))
   }, [game]);
 
   React.useEffect(() => {
