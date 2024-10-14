@@ -3,11 +3,11 @@ const mongoose = require('mongoose')
 const productSchema = new mongoose.Schema({
     name: {
         type: String,
-        required: [true, 'product name must be provided']
+        required: [true,'product name must be given']
     },
     price: {
-        type: String,
-        required: [true, 'price must be provided']
+        type: Number,
+        required: [true,'name must be given']
     },
     featured: {
         type: Boolean,
@@ -23,11 +23,13 @@ const productSchema = new mongoose.Schema({
     },
     company: {
         type: String,
+        /* If you want user to input names
         enum: {
             values: ['ikea', 'liddy', 'caressa', 'marcos'],
             message: '{VALUE} is not supported'
         }
-        //enum: ['ikea', 'liddy', 'caressa', 'marcos']
+        */
+        enum: ['ikea', 'liddy', 'caressa', 'marcos']
     }
 })
 
